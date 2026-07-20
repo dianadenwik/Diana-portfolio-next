@@ -33,10 +33,11 @@ export const projects: Project[] = [
   },
 ];
 
-
 export async function getProjects(): Promise<Project[]> {
-  return projects;
+return projects;
 }
+
+
 
 export async function getProjectById(id: number): Promise<Project | undefined> {
   return projects.find((p) => p.id === id);
