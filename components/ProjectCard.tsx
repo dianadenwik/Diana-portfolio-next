@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import type { Project } from "@/data/projects";
 
@@ -47,9 +48,11 @@ export default function ProjectCard({
 
   return (
     <li className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-        {title}
-      </h3>
+      <Link href={`/projects/${id}`}>
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 hover:underline">
+          {title}
+        </h3>
+      </Link>
 
       <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 flex-1">
         {description}
