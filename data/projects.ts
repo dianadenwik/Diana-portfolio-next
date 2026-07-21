@@ -35,6 +35,15 @@ export const projects: Project[] = [
     url: "",
     likes: 0,
   },
+  {
+    id: 4,
+    title: "24 Borders",
+    description:
+      "Personal travel diary web app showing 24 visited countries with search, sort, and filter across the full country list, plus country detail pages powered by the REST Countries API.",
+    techStack: ["React", "TypeScript", "Vite", "Tailwind", "React Router"],
+    url: "https://24-borders.vercel.app",
+    likes: 0,
+  },
 ];
 
 export async function getProjects(): Promise<Project[]> {
