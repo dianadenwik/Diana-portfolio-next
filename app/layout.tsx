@@ -2,6 +2,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Providers } from "./providers";
+
 
 export default function RootLayout({
   children,
@@ -11,6 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Providers>
         <ThemeProvider>
           <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white flex flex-col">
             <Navigation />
@@ -20,6 +23,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
