@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import type { Project } from "@/data/projects";
+import { filterProjectsByTech } from "@/utils/filterProjectsByTech";
 
 interface ProjectsProps {
   projects: Project[];
@@ -18,9 +19,7 @@ export default function Projects({ projects }: ProjectsProps) {
     }
   }
 
-  const filtered = projects.filter(
-    (p) => activeFilter === null || p.techStack.includes(activeFilter)
-  );
+  const filtered = filterProjectsByTech(projects, activeFilter);
 
   return (
     <section className="py-12">

@@ -41,3 +41,4 @@ export async function getProjects(): Promise<Project[]> {
 export async function getProjectById(id: number): Promise<Project | undefined> {
   return projects.find((p) => p.id === id);
 }
+
