@@ -14,13 +14,15 @@ export default function Navigation() {
 
   return (
     <nav className="bg-white border-b border-gray-200 px-6 py-4 dark:bg-gray-900 dark:border-gray-700">
-      <div className="max-w-4xl mx-auto flex items-center justify-between">
+      <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-y-2">
         <Link
           href="/"
-          className="text-xl font-bold text-gray-900 dark:text-white"
-        ></Link>
+          className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white whitespace-nowrap"
+        >
+          Diana Portfolio
+        </Link>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 sm:gap-6 flex-wrap">
           <Link href="/" className={navClass(pathname === "/")}>
             Home
           </Link>
