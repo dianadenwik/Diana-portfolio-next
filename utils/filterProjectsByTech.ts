@@ -2,9 +2,9 @@ import type { Project } from "@/data/projects";
 
 export function filterProjectsByTech(
   projects: Project[],
-  activeFilter: string | null
+  activeFilter: string | null,
 ): Project[] {
   return projects.filter(
-    (p) => activeFilter === null || p.techStack.includes(activeFilter)
+    (p) => activeFilter === null || p.techStack.includes(activeFilter),
   );
 }

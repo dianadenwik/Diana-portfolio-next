@@ -1,9 +1,8 @@
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
+import { ThemeProvider } from "next-themes";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Providers } from "./providers";
-
 
 export default function RootLayout({
   children,
@@ -11,18 +10,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
-        <ThemeProvider>
-          <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white flex flex-col">
-            <Navigation />
-            <main className="max-w-4xl mx-auto px-4 py-8 w-full flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+          >
+            <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white flex flex-col">
+              <Navigation />
+                <main className="max-w-4xl mx-auto px-4 py-8 w-full flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </ThemeProvider>
         </Providers>
       </body>
     </html>

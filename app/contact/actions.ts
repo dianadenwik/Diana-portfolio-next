@@ -17,7 +17,7 @@ export async function sendMessage(formData: FormData) {
     console.log("Validation failed: invalid email format.");
     return;
   }
-console.log("New contact submission:", { name, email, message })
+  console.log("New contact submission:", { name, email, message });
 
   revalidatePath("/contact");
 }
