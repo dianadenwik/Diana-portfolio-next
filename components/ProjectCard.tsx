@@ -16,7 +16,7 @@ export default function ProjectCard({
 
   const likeMutation = useMutation({
     mutationFn: async () => {
-      await new Promise((r) => setTimeout(r, 5000));
+      await new Promise((r) => setTimeout(r, 500));
     },
 
     onMutate: async (projectId: number) => {
@@ -87,8 +87,9 @@ export default function ProjectCard({
 
         <button
           onClick={() => likeMutation.mutate(id)}
+          disabled={likeMutation.isPending}
           aria-label="Like this project"
-          className="flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+          className="flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50 disabled:cursor-not-allowed"
         >
           ❤️ {likes}
         </button>
