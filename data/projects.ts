@@ -5,6 +5,7 @@ export interface Project {
   techStack: string[];
   url?: string;
   likes: number;
+  date: string;
 }
 
 export const projects: Project[] = [
@@ -15,7 +16,8 @@ export const projects: Project[] = [
       "Personal portfolio built with HTML and CSS. Includes dark mode toggle and contact form.",
     techStack: ["HTML", "CSS"],
     url: "",
-    likes: 0,
+    date: "2026-06-15",
+    likes: 17,
   },
   {
     id: 2,
@@ -24,7 +26,8 @@ export const projects: Project[] = [
       "Full-stack recipe web app built as a group project. I built the backend with SQLite, REST API endpoints, and an AI feature using GitHub Models.",
     techStack: ["Node.js", "SQLite", "Express", "TypeScript"],
     url: "",
-    likes: 0,
+    date: "2026-04-11",
+    likes: 15,
   },
   {
     id: 3,
@@ -33,7 +36,8 @@ export const projects: Project[] = [
       "React practice project showing a team of people with cards, online status, and CSS styling.",
     techStack: ["React", "TypeScript", "Vite"],
     url: "",
-    likes: 0,
+    date: "2026-05-21",
+    likes: 23,
   },
   {
     id: 4,
@@ -42,7 +46,8 @@ export const projects: Project[] = [
       "Personal travel diary web app showing 24 visited countries with search, sort, and filter across the full country list, plus country detail pages powered by the REST Countries API.",
     techStack: ["React", "TypeScript", "Vite", "Tailwind", "React Router"],
     url: "https://24-borders.vercel.app",
-    likes: 0,
+    date: "2026-07-24",
+    likes: 12,
   },
 ];
 
